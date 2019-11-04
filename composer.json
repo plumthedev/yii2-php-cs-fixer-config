@@ -3,7 +3,7 @@
   "description": "Yii2 PHP coding standards configuration",
   "type": "library",
   "require": {
-    "friendsofphp/php-cs-fixer": "^2.16",
+    "friendsofphp/php-cs-fixer": "^2.16"
   },
   "require-dev": {
     "phpunit/phpunit": "4.3.*"
