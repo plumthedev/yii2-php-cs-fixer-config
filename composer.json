@@ -1,0 +1,31 @@
+{
+  "name": "plumthedev/yii2-php-cs-fixer-config",
+  "description": "Yii2 PHP coding standards configuration",
+  "type": "library",
+  "require": {},
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.16",
+    "phpunit/phpunit": "4.3.*"
+  },
+  "scripts": {
+    "cs-fix": ".\\vendor\\bin\\php-cs-fixer fix",
+    "unit-tests": ".\\vendor\\bin\\phpunit"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "plumthedev",
+      "email": "kacper.pruszynski@compania.com.pl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "plumthedev\\PhpCsFixer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "plumthedev\\PhpCsFixer\\tests\\": "tests/"
+    }
+  }
+}
