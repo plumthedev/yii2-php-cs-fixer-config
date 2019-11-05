@@ -21,6 +21,6 @@ class FinderTest extends TestCase
 
     public function testIsExcludingDirs()
     {
-        $this->assertNotEmpty($this->csFixerFinder->yiiExcludeFiles);
+        $this->assertNotEmpty($this->csFixerFinder->yiiProjectExcludePaths);
     }
 }

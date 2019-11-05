@@ -12,7 +12,7 @@ use PhpCsFixer\Finder as PhpCsFixerFinder;
 
 class Finder extends PhpCsFixerFinder
 {
-    public $yiiExcludeFiles = [
+    public $yiiProjectExcludePaths = [
         'views',
         'mail',
         'vendor',
@@ -24,6 +24,6 @@ class Finder extends PhpCsFixerFinder
     public function __construct()
     {
         parent::__construct();
-        $this->exclude($this->yiiExcludeFiles);
+        $this->exclude($this->yiiProjectExcludePaths);
     }
 }
