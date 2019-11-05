@@ -1,5 +1,5 @@
 # Yii2 PHP CS Fixer Config
-PHP CS Fixer config for Yii2 projects
+PHP CS Fixer config for Yii2 projects. The ruleset is [grab from Yii 2 ecosystem](https://github.com/yiisoft/yii2/blob/master/cs/src/YiiConfig.php).
 
 ## Installation
 ```shell script
