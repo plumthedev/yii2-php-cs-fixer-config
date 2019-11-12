@@ -1,4 +1,13 @@
 <?php
+/**
+ * Yii2 PHP CS Fixer Config
+ *
+ * @author Kacper Pruszynski (plumthedev)
+ * @link https://github.com/plumthedev/yii2-php-cs-fixer-config
+ * @copyright Copyright (c) 2019 plumthedev
+ * @license https://github.com/plumthedev/yii2-php-cs-fixer-config/blob/master/LICENSE
+ * @version 1.0.1
+ */
 
 namespace plumthedev\PhpCsFixer\tests;
 
@@ -42,5 +51,14 @@ class ConfigTest extends TestCase
     public function testHasValidName()
     {
         $this->assertEquals('yii2-php-cs-fixer-config', $this->csFixerConfig->getName());
+    }
+
+    public function testMergeSuccessfully()
+    {
+        $this->csFixerConfig->mergeRules([
+            'mergedSuccessfully' => true,
+        ]);
+        $csFixerConfigRules = $this->csFixerConfig->getRules();
+        $this->assertTrue($csFixerConfigRules['mergedSuccessfully']);
     }
 }
