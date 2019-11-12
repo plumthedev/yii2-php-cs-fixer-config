@@ -1,14 +1,18 @@
 <?php
 /**
- * Yii2 PHP CS Fixer Config - Config.
+ * Yii2 PHP CS Fixer Config
  *
  * @author Kacper Pruszynski (plumthedev)
- * @version 1.0.0
+ * @link https://github.com/plumthedev/yii2-php-cs-fixer-config
+ * @copyright Copyright (c) 2019 plumthedev
+ * @license https://github.com/plumthedev/yii2-php-cs-fixer-config/blob/master/LICENSE
+ * @version 1.0.1
  */
 
 namespace plumthedev\PhpCsFixer;
 
 use PhpCsFixer\Config as PhpCsFixerConfig;
+use yii\helpers\ArrayHelper;
 
 class Config extends PhpCsFixerConfig
 {
@@ -17,11 +21,7 @@ class Config extends PhpCsFixerConfig
         parent::__construct($name);
         $this->setRiskyAllowed(true);
         $this->setFinder(Finder::create());
-    }
-
-    public function getRules()
-    {
-        return [
+        $this->setRules([
             '@PSR2' => true,
             'array_syntax' => [
                 'syntax' => 'short',
@@ -124,6 +124,13 @@ class Config extends PhpCsFixerConfig
             'trim_array_spaces' => true,
             'unary_operator_spaces' => true,
             'whitespace_after_comma_in_array' => true,
-        ];
+        ]);
+    }
+
+    public function mergeRules($rules)
+    {
+        $mergedRules = ArrayHelper::merge($this->getRules(), $rules);
+        $this->setRules($mergedRules);
+        return $this;
     }
 }
