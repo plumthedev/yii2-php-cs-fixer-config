@@ -1,12 +1,17 @@
 <?php
-$projectHeader = <<<'HEADER'
+$composerJsonPath = __DIR__ . '/composer.json';
+$composerJson = file_get_contents($composerJsonPath);
+$composerProject = json_decode($composerJson);
+$currentYear = date('Y');
+
+$projectHeader = <<<HEADER
 Yii2 PHP CS Fixer Config
 
 @author Kacper Pruszynski (plumthedev)
 @link https://github.com/plumthedev/yii2-php-cs-fixer-config
-@copyright Copyright (c) 2019 plumthedev
+@copyright Copyright (c) 2019 - {$currentYear} plumthedev
 @license https://github.com/plumthedev/yii2-php-cs-fixer-config/blob/master/LICENSE
-@version 1.0.1
+@version {$composerProject->version}
 HEADER;
 
 use plumthedev\PhpCsFixer\Config;
