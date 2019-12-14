@@ -6,7 +6,7 @@
  * @link https://github.com/plumthedev/yii2-php-cs-fixer-config
  * @copyright Copyright (c) 2019 - 2019 plumthedev
  * @license https://github.com/plumthedev/yii2-php-cs-fixer-config/blob/master/LICENSE
- * @version 1.0.1
+ * @version 1.2.0
  */
 
 namespace plumthedev\PhpCsFixer;
