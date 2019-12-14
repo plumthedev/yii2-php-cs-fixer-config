@@ -4,9 +4,9 @@
  *
  * @author Kacper Pruszynski (plumthedev)
  * @link https://github.com/plumthedev/yii2-php-cs-fixer-config
- * @copyright Copyright (c) 2019 plumthedev
+ * @copyright Copyright (c) 2019 - 2019 plumthedev
  * @license https://github.com/plumthedev/yii2-php-cs-fixer-config/blob/master/LICENSE
- * @version 1.0.1
+ * @version 1.2.0
  */
 
 namespace plumthedev\PhpCsFixer\tests;
@@ -26,6 +26,11 @@ class ConfigTest extends TestCase
     public function testIsInstanceOfPhpCsFixerConfig()
     {
         $this->assertInstanceOf('PhpCsFixer\Config', $this->csFixerConfig);
+    }
+
+    public function testIsInstanceOfYiiCsFixerConfig()
+    {
+        $this->assertInstanceOf('yii\cs\YiiConfig', $this->csFixerConfig);
     }
 
     public function testHasRules()
@@ -51,14 +56,5 @@ class ConfigTest extends TestCase
     public function testHasValidName()
     {
         $this->assertEquals('yii2-php-cs-fixer-config', $this->csFixerConfig->getName());
-    }
-
-    public function testMergeSuccessfully()
-    {
-        $this->csFixerConfig->mergeRules([
-            'mergedSuccessfully' => true,
-        ]);
-        $csFixerConfigRules = $this->csFixerConfig->getRules();
-        $this->assertTrue($csFixerConfigRules['mergedSuccessfully']);
     }
 }
