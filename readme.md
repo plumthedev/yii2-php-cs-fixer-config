@@ -1,3 +1,5 @@
+# Dear Packagist maintainer, looks it is me plumthedev and I really really need your help! Could you change my email to kacper.pruszynski99@gmail.com? Thanks in advance!
+
 # Yii2 PHP CS Fixer Config
 ![Packagist downloads](https://img.shields.io/packagist/dt/plumthedev/yii2-php-cs-fixer-config?color=%238e44ad)
 ![GitHub license](https://img.shields.io/github/license/plumthedev/yii2-php-cs-fixer-config?color=%238e44ad)
